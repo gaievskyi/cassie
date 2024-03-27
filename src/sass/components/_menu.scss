@@ -1,0 +1,95 @@
+.menu-container {
+  display: flex;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba($color: #111111, $alpha: 0.8);
+  opacity: 1;
+  z-index: 51;
+
+  .menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    height: 100%;
+    width: 40vw;
+    padding: 4rem;
+    @media (max-width: $layout-breakpoint-xsmall) {
+      width: 80vw;
+    }
+    .menu-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      justify-content: space-between;
+      text-align: center;
+      .logo {
+        h2 {
+          font-size: 10rem;
+        }
+        span {
+          letter-spacing: 0.7rem;
+        }
+      }
+      .grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        // width: 95%;
+        margin: 3rem auto;
+        img {
+          width: calc(100% / 3.3);
+          aspect-ratio: 1/1;
+          object-fit: cover;
+          object-position: center;
+          cursor: pointer;
+        }
+      }
+      .address {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        h3 {
+          font-size: 1.7rem;
+        }
+        p {
+          font-size: 1.3rem;
+        }
+      }
+      .contact {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        p {
+          font-size: 1.3rem;
+        }
+      }
+      .buttons {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        margin-bottom: 2rem;
+
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          outline: 1px solid #ccc;
+          padding: 1rem;
+          transition: 0.2s ease background-color;
+          &:hover {
+            background-color: #c1c1c1;
+            outline: none;
+          }
+          &:active {
+            translate: 0 1px;
+          }
+        }
+      }
+    }
+  }
+}

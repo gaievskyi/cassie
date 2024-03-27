@@ -1,0 +1,112 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.8);
+  color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: saturate(180%) blur(20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  @media (max-width: $layout-breakpoint-medium) {
+    padding: 0 72px;
+    font-size: 1.2rem;
+  }
+  @media (max-width: $layout-breakpoint-xsmall) {
+    padding: 0 12px;
+    height: 96px;
+    font-size: 1rem;
+  }
+  .header-inner {
+    width: 92%;
+    gap: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-right: 2rem;
+
+      @media (max-width: $layout-breakpoint-medium) {
+        font-size: 2.8rem;
+        flex: 4;
+      }
+    }
+    .nav {
+      @media (max-width: $layout-breakpoint-medium) {
+        display: none;
+      }
+      height: 100%;
+      display: flex;
+      gap: 5rem;
+      align-items: center;
+      justify-content: center;
+      li {
+        list-style: none;
+
+        a {
+          color: inherit;
+          height: 100%;
+          display: inline-block;
+          text-decoration: none;
+          white-space: nowrap;
+          font-weight: 500;
+          font-size: 1.2rem;
+          overflow: hidden;
+          position: relative;
+          &:hover {
+            color: white;
+          }
+        }
+      }
+    }
+
+    .contact {
+      text-decoration: none;
+      color: #df9815;
+      font-size: 1.5rem;
+      font-weight: 700;
+      white-space: nowrap;
+      text-underline-offset: 3px;
+      &:hover {
+        text-decoration: underline;
+      }
+      @media (max-width: $layout-breakpoint-medium) {
+        border: none;
+        display: none;
+      }
+      @media (max-width: $layout-breakpoint-xsmall) {
+        border: none;
+        display: none;
+      }
+    }
+    .hamburger-menu {
+      height: 46px;
+      width: 46px;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transition: 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+      cursor: pointer;
+      &:hover {
+        background: black;
+      }
+      @media (min-width: $layout-breakpoint-medium) {
+        display: none;
+      }
+      span {
+        width: 20px;
+        height: 3px;
+        margin: 2px 0;
+        background: rgba(255, 255, 255, 0.8);
+        display: block;
+      }
+    }
+  }
+}

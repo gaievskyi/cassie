@@ -1,0 +1,32 @@
+body {
+  background: #f0eff1;
+}
+
+hr {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+::selection {
+  color: white;
+  background: black;
+}
+
+a {
+  color: #df9815;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(50px);
+  }
+}
+
+svg #wheel {
+  animation: scroll ease 1.5s infinite;
+}
